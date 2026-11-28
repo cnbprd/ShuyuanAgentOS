@@ -9,6 +9,7 @@
 #include <cstdint>
 
 namespace OHOS {
+using HiviewDFX::HiLog;
 namespace Shuyuan {
 
 namespace {

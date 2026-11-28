@@ -25,8 +25,8 @@ ohos_executable("shuyuan_demo_client") {
         "//foundation/shuyuan/jianguan:jianguan_interfaces",
         "//foundation/shuyuan/heming:heming_interfaces",
         "//foundation/shuyuan/lingzhong:lingzhong_interfaces",
-        "//foundation/systemabilitymgr/safwk:sa_framework",
-        "//communication/ipc:ipc_core",
+        "//foundation/systemabilitymgr/safwk/interfaces/innerkits/safwk:system_ability_fwk",
+        "//foundation/communication/ipc/interfaces/innerkits/ipc_core:ipc_core",
     ]
 
     part_name = "shuyuan"

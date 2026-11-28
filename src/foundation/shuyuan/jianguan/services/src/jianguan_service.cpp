@@ -7,6 +7,7 @@
 #include <sstream>
 
 namespace OHOS {
+using HiviewDFX::HiLog;
 namespace Shuyuan {
 
 namespace {

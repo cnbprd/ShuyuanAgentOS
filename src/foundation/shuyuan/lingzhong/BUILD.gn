@@ -19,9 +19,11 @@ ohos_shared_library("lingzhong_service") {
     ]
 
     deps = [
-        "//foundation/systemabilitymgr/safwk:sa_framework",
-        "//communication/ipc:ipc_core",
-        "//base/hiviewdfx/hilog:hilog",
+        "//foundation/systemabilitymgr/safwk/interfaces/innerkits/safwk:system_ability_fwk",
+        "//foundation/communication/ipc/interfaces/innerkits/ipc_core:ipc_core",
+        "//base/hiviewdfx/hilog/interfaces/native/innerkits:libhilog",
+        "//commonlibrary/c_utils/base:utils",
+        "//foundation/systemabilitymgr/samgr/interfaces/innerkits/samgr_proxy:samgr_proxy",
         "//foundation/shuyuan/lingtai:lingtai_interfaces",
     ]
 
@@ -36,6 +38,7 @@ config("lingzhong_interfaces_public_config") {
     include_dirs = [
         "interfaces/innerkits/include",
         "//foundation/shuyuan/interfaces/innerkits/include",
+        "//commonlibrary/c_utils/base/include",
     ]
 }
 
@@ -47,12 +50,14 @@ ohos_shared_library("lingzhong_interfaces") {
     include_dirs = [
         "interfaces/innerkits/include",
         "//foundation/shuyuan/interfaces/innerkits/include",
+        "//commonlibrary/c_utils/base/include",
     ]
 
     public_configs = [ ":lingzhong_interfaces_public_config" ]
 
     deps = [
-        "//communication/ipc:ipc_core",
+        "//foundation/communication/ipc/interfaces/innerkits/ipc_core:ipc_core",
+        "//commonlibrary/c_utils/base:utils",
     ]
 
     part_name = "lingzhong"

@@ -6,6 +6,7 @@
 #include "hilog/log.h"
 
 namespace OHOS {
+using HiviewDFX::HiLog;
 namespace Shuyuan {
 
 namespace {

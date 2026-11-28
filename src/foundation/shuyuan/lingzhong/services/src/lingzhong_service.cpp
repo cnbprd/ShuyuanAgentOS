@@ -4,11 +4,12 @@
  */
 #include "lingzhong_service.h"
 #include "lingtai_service_proxy.h"
-#include "system_ability_manager_client.h"
+#include "iservice_registry.h"
 #include "iremote_object.h"
 #include "hilog/log.h"
 
 namespace OHOS {
+using HiviewDFX::HiLog;
 namespace Shuyuan {
 
 namespace {
