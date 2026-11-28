@@ -3,8 +3,7 @@
 import("//build/ohos.gni")
 
 # 跨 SA 串通演示客户端（测试可执行）。
-# 正式纳入产品时，需在对应 bundle.json 的 sub_component 登记本目标；
-# deps 中的接口目标名以实际源码树为准（见 07-阶段一自研手册.md 待核实项）。
+# 已通过本目录 bundle.json 的 sub_component 登记为独立产品组件。
 ohos_executable("shuyuan_demo_client") {
     sources = [
         "demo_client.cpp",
@@ -17,6 +16,8 @@ ohos_executable("shuyuan_demo_client") {
         "//foundation/shuyuan/heming/interfaces/innerkits/include",
         "//foundation/shuyuan/lingzhong/interfaces/innerkits/include",
         "//foundation/shuyuan/interfaces/innerkits/include",
+        "//foundation/systemabilitymgr/samgr/interfaces/innerkits/samgr_proxy/include",
+        "//commonlibrary/c_utils/base/include",
     ]
 
     deps = [
@@ -26,9 +27,11 @@ ohos_executable("shuyuan_demo_client") {
         "//foundation/shuyuan/heming:heming_interfaces",
         "//foundation/shuyuan/lingzhong:lingzhong_interfaces",
         "//foundation/systemabilitymgr/safwk/interfaces/innerkits/safwk:system_ability_fwk",
+        "//foundation/systemabilitymgr/samgr/interfaces/innerkits/samgr_proxy:samgr_proxy",
         "//foundation/communication/ipc/interfaces/innerkits/ipc_core:ipc_core",
+        "//commonlibrary/c_utils/base:utils",
     ]
 
-    part_name = "shuyuan"
+    part_name = "shuyuan_demo_client"
     install_enable = true
 }

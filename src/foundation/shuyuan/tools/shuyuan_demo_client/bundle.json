@@ -1,0 +1,38 @@
+{
+    "name": "@ohos/shuyuan_demo_client",
+    "description": "Shuyuan AgentOS - cross-SA demo client for capability probing",
+    "version": "5.1.0",
+    "license": "Apache-2.0",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "foundation/shuyuan/tools/shuyuan_demo_client"
+    },
+    "dirs": {},
+    "scripts": {},
+    "component": {
+        "name": "shuyuan_demo_client",
+        "subsystem": "shuyuan",
+        "syscap": [],
+        "features": [],
+        "adapted_system_type": [
+            "standard"
+        ],
+        "rom": "1MB",
+        "ram": "2MB",
+        "deps": {
+            "components": [
+                "safwk",
+                "ipc",
+                "hilog"
+            ],
+            "third_party": []
+        },
+        "build": {
+            "sub_component": [
+                "//foundation/shuyuan/tools/shuyuan_demo_client:shuyuan_demo_client"
+            ],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}

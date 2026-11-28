@@ -27,7 +27,7 @@
 #include "jianguan_service_proxy.h"
 #include "heming_service_proxy.h"
 #include "lingzhong_service_proxy.h"
-#include "system_ability_manager_client.h"
+#include "iservice_registry.h"
 #include "iremote_object.h"
 
 #include <cstdio>
