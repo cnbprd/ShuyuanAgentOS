@@ -1,0 +1,36 @@
+{
+    "name": "@ohos/shuyuan_init",
+    "description": "Shuyuan AgentOS - unified boot sequence for the five system abilities",
+    "version": "5.1.0",
+    "license": "Apache-2.0",
+    "publishAs": "code-segment",
+    "segment": {
+        "destPath": "foundation/shuyuan/init"
+    },
+    "dirs": {},
+    "scripts": {},
+    "component": {
+        "name": "shuyuan_init",
+        "subsystem": "shuyuan",
+        "syscap": [],
+        "features": [],
+        "adapted_system_type": [
+            "standard"
+        ],
+        "rom": "8KB",
+        "ram": "0KB",
+        "deps": {
+            "components": [
+                "init"
+            ],
+            "third_party": []
+        },
+        "build": {
+            "sub_component": [
+                "//foundation/shuyuan/init:shuyuan_boot_cfg"
+            ],
+            "inner_kits": [],
+            "test": []
+        }
+    }
+}
